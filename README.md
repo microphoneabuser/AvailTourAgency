@@ -1,3 +1,3 @@
 # AvailTourAgency
 ИС для туристического агентства. 
-C#, WPF, Entity Framework.
+C#, WPF, SQLite, Entity Framework.
