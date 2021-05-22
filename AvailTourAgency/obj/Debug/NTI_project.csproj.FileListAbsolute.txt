@@ -1,0 +1,199 @@
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\NTI_project.exe.config
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\NTI_project.exe
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\NTI_project.pdb
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\EntityFramework.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\MaterialDesignColors.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\System.Data.SQLite.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\EntityFramework.xml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\MaterialDesignColors.pdb
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\System.Data.SQLite.xml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\RegistrationWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\App.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\NTI_project_MarkupCompile.cache
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\NTI_project_MarkupCompile.lref
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\App.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\RegistrationWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\NTI_project.g.resources
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\NTI_project.Properties.Resources.resources
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\NTI_project.csproj.GenerateResource.cache
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\NTI_project.csproj.CopyComplete
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\NTI_project.exe
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\NTI_project.pdb
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\WpfAnimatedGif.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\WpfAnimatedGif.pdb
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\WpfAnimatedGif.xml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\MainWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\MainWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\NTI_project.csprojAssemblyReference.cache
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StartWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StartWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\MyMessageBox.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\MyMessageBox.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\Dragablz.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\Dragablz.pdb
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\Dragablz.xml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CreateOrderControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CreateOrderControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CtrlMessageBox.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CtrlMessageBox.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\HomeControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\HomeControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerAllOrdersControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerLoginWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerMainWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerAllOrdersControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerLoginWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerMainWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerProcessingControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerProcessingControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerMyOrdersControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\ManagerMyOrdersControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CourierAllOrdersControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CourierLoginWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CourierMainWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CourierMyOrdersControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CourierAllOrdersControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CourierLoginWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CourierMainWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\CourierMyOrdersControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StoremanAllOrdersControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StoremanLoginWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StoremanMainWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StoremanMyOrdersControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StoremanAllOrdersControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StoremanLoginWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StoremanMainWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\StoremanMyOrdersControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\AdminLoginWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\AdminMainWindow.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\AdminOrdersControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\AdminStaffControl.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\AdminLoginWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\AdminMainWindow.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\AdminOrdersControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\AdminStaffControl.baml
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\Account.g.cs
+C:\Users\danil\OneDrive\Рабочий стол\NTI_project\NTI_project\obj\Debug\Account.baml
+D:\code_projects\NTI\NTI_project\bin\Debug\NTI_project.exe.config
+D:\code_projects\NTI\NTI_project\bin\Debug\NTI_project.exe
+D:\code_projects\NTI\NTI_project\bin\Debug\NTI_project.pdb
+D:\code_projects\NTI\NTI_project\bin\Debug\Dragablz.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\EntityFramework.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\EntityFramework.SqlServer.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\MaterialDesignColors.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\MaterialDesignThemes.Wpf.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\System.Data.SQLite.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\System.Data.SQLite.EF6.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\System.Data.SQLite.Linq.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\WpfAnimatedGif.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\Xceed.Wpf.AvalonDock.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\Xceed.Wpf.Toolkit.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\Dragablz.pdb
+D:\code_projects\NTI\NTI_project\bin\Debug\Dragablz.xml
+D:\code_projects\NTI\NTI_project\bin\Debug\EntityFramework.xml
+D:\code_projects\NTI\NTI_project\bin\Debug\EntityFramework.SqlServer.xml
+D:\code_projects\NTI\NTI_project\bin\Debug\MaterialDesignColors.pdb
+D:\code_projects\NTI\NTI_project\bin\Debug\MaterialDesignThemes.Wpf.pdb
+D:\code_projects\NTI\NTI_project\bin\Debug\MaterialDesignThemes.Wpf.xml
+D:\code_projects\NTI\NTI_project\bin\Debug\System.Data.SQLite.xml
+D:\code_projects\NTI\NTI_project\bin\Debug\WpfAnimatedGif.pdb
+D:\code_projects\NTI\NTI_project\bin\Debug\WpfAnimatedGif.xml
+D:\code_projects\NTI\NTI_project\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project.csprojAssemblyReference.cache
+D:\code_projects\NTI\NTI_project\obj\Debug\Account.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\AdminLoginWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\AdminMainWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\AdminOrdersControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\AdminStaffControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\CourierAllOrdersControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\CourierLoginWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\CourierMainWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\CourierMyOrdersControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\CreateOrderControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\CtrlMessageBox.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\HomeControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerAllOrdersControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerLoginWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerMainWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerMyOrdersControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerProcessingControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\MyMessageBox.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\RegistrationWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\MainWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\StartWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\StoremanAllOrdersControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\StoremanLoginWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\StoremanMainWindow.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\StoremanMyOrdersControl.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\App.g.cs
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project_MarkupCompile.cache
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project_MarkupCompile.lref
+D:\code_projects\NTI\NTI_project\obj\Debug\App.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\Account.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\AdminLoginWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\AdminMainWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\AdminOrdersControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\AdminStaffControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\CourierAllOrdersControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\CourierLoginWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\CourierMainWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\CourierMyOrdersControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\CreateOrderControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\CtrlMessageBox.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\HomeControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerAllOrdersControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerLoginWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerMainWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerMyOrdersControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\ManagerProcessingControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\MyMessageBox.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\RegistrationWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\MainWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\StartWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\StoremanAllOrdersControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\StoremanLoginWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\StoremanMainWindow.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\StoremanMyOrdersControl.baml
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project.g.resources
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project.Properties.Resources.resources
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project.csproj.GenerateResource.cache
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project.csproj.CoreCompileInputs.cache
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project.csproj.CopyComplete
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project.exe
+D:\code_projects\NTI\NTI_project\obj\Debug\NTI_project.pdb

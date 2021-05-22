@@ -1,0 +1,42 @@
+﻿<Window x:Class="AvailTourAgency.Views.ExitMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AvailTourAgency.Views"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        Title="ExitMessageBox" Height="250" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="CanMinimize" PreviewKeyDown="Window_PreviewKeyDown"
+        BorderThickness="0.5" BorderBrush="#4CB1F7">
+    <Grid Background="#4CB1F7">
+        <Grid x:Name="Up" Grid.ColumnSpan="2" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Name="Toolbar" Grid.Row="0" Background="White" Margin="0" VerticalAlignment="Top" >
+                <Polygon x:Name="Dragger" HorizontalAlignment="Center" Fill="White" Opacity="0.2" Margin="26,0,26,0" Width="292" MouseLeftButtonDown="Toolbar_MouseLeftButtonDown">
+                </Polygon>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Border Name="close_Button" MouseLeftButtonDown="close_Button_MouseLeftButtonDown" MouseEnter="close_Button_MouseEnter" MouseLeave="close_Button_MouseLeave" MouseLeftButtonUp="close_Button_MouseLeftButtonUp">
+                        <materialDesign:PackIcon Kind="Close" Height="Auto" Width="19" Margin="3,3,5,3"  Background="Transparent" Foreground="#4CB1F7" VerticalAlignment="Stretch" />
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Grid>
+        <Border Margin="25,62,25,0" Background="White" VerticalAlignment="Top" CornerRadius="10"  Grid.ColumnSpan="2" Height="150">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="DarkSlateGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock x:Name="Text" Text="Вы уверены что хотите закрыть программу?" FontSize="16" FontWeight="Regular" HorizontalAlignment="Center" Margin="0 50 0 20" Foreground="#4CB1F7"></TextBlock>
+                <Grid x:Name="YesNoGrid" Margin="60 0 60 0">
+                    <Button Name="YesButton" Content="Да" HorizontalAlignment="Left" Click="YesButton_Click"/>
+                    <Button Name="NoButton" Content="Нет" HorizontalAlignment="Right" Click="NoButton_Click"/>
+                </Grid>
+                <Grid x:Name="OkGrid" Margin="60 0 60 0" Visibility="Collapsed">
+                    <Button Name="OkButton" Content="OK" HorizontalAlignment="Center" Click="NoButton_Click"/>
+                </Grid>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

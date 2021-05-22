@@ -1,0 +1,394 @@
+﻿<UserControl x:Class="AvailTourAgency.Views.SaleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:AvailTourAgency.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="910" d:DesignWidth="1024" Background="White">
+    <ScrollViewer>
+        <StackPanel>
+
+            <Grid Height="910">
+                <StackPanel x:Name="HomePanel">
+                    <Grid>
+                        <TextBlock Foreground="#FF3580BF" FontSize="30" FontWeight="Bold" Margin="10" Grid.Row="1"><Run Text="Продажа №"/></TextBlock>
+                        <TextBox x:Name='IdBox' IsReadOnly="True"
+                                  HorizontalAlignment="Left"
+                                  Foreground="#FF3580BF" BorderBrush="#FF90CAF9" 
+                                  Background="#3390CAF9" FontSize="22" Width="150" 
+                                  Margin="197,10,0,9.8" Height="41" HorizontalContentAlignment="Center" 
+                                  VerticalContentAlignment="Center">
+                        </TextBox>
+                        <TextBlock x:Name="EditingIndicator" Visibility="Collapsed" Foreground="Gray" FontSize="24" FontWeight="Medium" Margin="10" HorizontalAlignment="Center" TextDecorations="{x:Null}"><Run Text="Режим редактирования"/></TextBlock>
+                        <TextBlock x:Name="comeBackButton" Margin="0 0 30 0" Text="&lt; Вернуться к списку продаж" FontSize="13" Foreground="#FF3580BF" VerticalAlignment="Center" HorizontalAlignment="Right" MouseEnter="comeBackButton_MouseEnter" MouseLeave="comeBackButton_MouseLeave" MouseLeftButtonDown="comeBackButton_MouseLeftButtonDown" MouseLeftButtonUp="comeBackButton_MouseLeftButtonUp"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel x:Name="SaleViewPanel" Margin="10,50,10,47" Visibility="Visible">
+                    <Grid Margin="0 0 0 0" Height="437">
+                        <StackPanel HorizontalAlignment="Left" Width="480">
+                            <StackPanel>
+                                <Grid>
+                                    <TextBlock Text="Дата продажи:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 10 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="SaleDateBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Общая стоимость:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="PriceBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Способ оплаты:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="PaymentMethodBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Тур-менеджер:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="EmployeeBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                            </StackPanel>
+
+                            <Border Margin="5,10,5,10" BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="267" VerticalAlignment="Top">
+                                <Grid>
+                                    <StackPanel>
+                                        <TextBlock Text="Дополнительные услуги:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,5,10,10" VerticalAlignment="Center"></TextBlock>
+                                        <DataGrid x:Name="AddServicesGrid" ItemsSource="{Binding AddServicesItems}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                          Height="218">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding Name}" Header="Название" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Price}" Header="Цена" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Quantity}" Header="Количество" Width="Auto"></DataGridTextColumn>
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Margin="485,0,0,0" Height="431" VerticalAlignment="Top" HorizontalAlignment="Left" Width="492">
+                            <Grid>
+                                <TextBlock Text="Клиент:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 10 0 5" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="ClientBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="391" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="80,5,0,0" Height="31" TextDecorations="UnderLine"
+                                         MouseDoubleClick="ClientBox_MouseDoubleClick" 
+                                         MouseEnter="ClientBox_MouseEnter" MouseLeave="ClientBox_MouseLeave">
+                                </TextBox>
+                            </Grid>
+                            <Grid>
+                                <TextBlock Text="Город:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="CityBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="391" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="80,5,0,0" Height="31" TextDecorations="UnderLine"
+                                         MouseDoubleClick="CityBox_MouseDoubleClick"
+                                         MouseEnter="CityBox_MouseEnter" MouseLeave="CityBox_MouseLeave">
+                                </TextBox>
+                            </Grid>
+                            <Grid>
+                                <TextBlock Text="Отель:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="HotelBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="391" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="80,5,0,0" Height="31" TextDecorations="UnderLine"
+                                         MouseDoubleClick="HotelBox_MouseDoubleClick"
+                                         MouseEnter="HotelBox_MouseEnter" MouseLeave="HotelBox_MouseLeave">
+                                </TextBox>
+                            </Grid>
+                            <Grid>
+                                <TextBlock Text="Тур:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="TourBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="391" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="80,5,0,0" Height="31" TextDecorations="UnderLine"
+                                         MouseDoubleClick="TourBox_MouseDoubleClick"
+                                         MouseEnter="TourBox_MouseEnter" MouseLeave="TourBox_MouseLeave">
+                                </TextBox>
+                            </Grid>
+
+
+                            <Border Margin="5,10,5,10" BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="267" VerticalAlignment="Top">
+                                <Grid>
+                                    <StackPanel>
+                                        <TextBlock Text="Номера отеля:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,5,10,10" VerticalAlignment="Center"></TextBlock>
+                                        <DataGrid x:Name="HotelRoomsGrid" ItemsSource="{Binding RoomsItems}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                          Height="218">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding FirstTypeOfRoom}" Header="Первый тип" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding SecondTypeOfRoom}" Header="Второй тип" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Price24}" Header="Цена за сутки" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Description}" Header="Описание" Width="Auto"></DataGridTextColumn>
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Height="329">
+                        <Border Margin="5,5,5,0" BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="314" VerticalAlignment="Top">
+                            <Grid>
+                                <StackPanel>
+                                    <TextBlock Text="Информация о туристах:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,5,10,10" VerticalAlignment="Center"></TextBlock>
+                                    <DataGrid x:Name="TouristsGrid" ItemsSource="{Binding TouristsItems}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                          Height="262">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding FIO}" Header="ФИО" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Номер телефона" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Дата рождения" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding DocumentType}" Header="Тип документа" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding DocumentData}" Header="Серия и номер документа" Width="Auto"/>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+
+
+
+
+
+                <StackPanel x:Name="SaleEditPanel" Margin="10,50,10,47" Visibility="Collapsed">
+                    <Grid Margin="0 0 0 0" Height="437">
+                        <StackPanel HorizontalAlignment="Left" Width="480" Margin="0,0,0,0">
+                            <StackPanel>
+                                <Grid>
+                                    <TextBlock Text="Дата продажи:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 10 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="EditSaleDateBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Общая стоимость:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="EditPriceBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="False" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31" PreviewTextInput="EditPriceBox_PreviewTextInput">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Способ оплаты:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <ComboBox x:Name="EditPaymentMethodBox" Style="{StaticResource MaterialDesignComboBox}"
+                                          SelectedIndex='0' HorizontalAlignment="Left"
+                                          Foreground="#FF3580BF" BorderBrush="#FF90CAF9" 
+                                          Background="#3390CAF9" FontSize="14" Width="310" 
+                                          Margin="161,2,0,0" Height="33">
+                                        <ComboBoxItem>Наличный расчет</ComboBoxItem>
+                                        <ComboBoxItem>Банковская карта</ComboBoxItem>
+                                    </ComboBox>
+                                </Grid>
+
+                                <Grid>
+                                    <TextBlock Text="Тур-менеджер:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="EditEmployeeBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="309" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                            </StackPanel>
+
+                            <Border Margin="5,10,5,10" BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="267" VerticalAlignment="Top">
+                                <Grid>
+                                    <StackPanel>
+                                        <TextBlock Text="Дополнительные услуги:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,5,10,10" VerticalAlignment="Center"></TextBlock>
+                                        <DataGrid x:Name="EditAddServicesGrid" ItemsSource="{Binding AddServicesItems}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                          Height="185">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding Name}" Header="Название" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Price}" Header="Цена" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Quantity}" Header="Количество" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTemplateColumn>
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <CheckBox Style="{StaticResource MaterialDesignCheckBox}" Name="CheckAddService"
+                                                            Content="Удалить" Click="CheckAddService_Click" Foreground="#FF0554F2"/>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                </DataGridTemplateColumn>
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                        <StackPanel Margin="0,5,0,0" Orientation="Horizontal" Height="34" VerticalAlignment="Bottom">
+                                            <Button x:Name="AddAddService" Margin="5,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Добавить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="Auto" VerticalAlignment="Stretch" ClickMode="Release" Click="AddAddService_Click"/>
+                                            <Button x:Name="DelAddService" Margin="15,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Удалить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="Auto" ClickMode="Release" Click="DelAddService_Click"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+
+                        <StackPanel Margin="485,0,0,0" Height="431" VerticalAlignment="Top" HorizontalAlignment="Left" Width="492">
+                            <Grid>
+                                <TextBlock Text="Клиент:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 10 0 5" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="EditClientBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="290" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="80,5,0,0" Height="31">
+                                </TextBox>
+                                <Button x:Name="FindClient" Margin="0,5,10,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Найти" HorizontalAlignment="Right" Width="95" BorderBrush="#FF0017FF" Height="31" ClickMode="Release" Click="FindClient_Click"/>
+                            </Grid>
+                            <Grid>
+                                <TextBlock Text="Город:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="EditCityBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="290" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="80,5,0,0" Height="31">
+                                </TextBox>
+                                <Button x:Name="FindCity" Margin="0,5,10,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Найти" HorizontalAlignment="Right" Width="95" BorderBrush="#FF0017FF" Height="31" ClickMode="Release" Click="FindCity_Click"/>
+                            </Grid>
+                            <Grid>
+                                <TextBlock Text="Отель:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="EditHotelBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="290" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="80,5,0,0" Height="31">
+                                </TextBox>
+                                <Button x:Name="FindHotel" Margin="0,5,10,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Найти" HorizontalAlignment="Right" Width="95" BorderBrush="#FF0017FF" Height="31" ClickMode="Release" Click="FindHotel_Click"/>
+                            </Grid>
+                            <Grid>
+                                <TextBlock Text="Тур:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="EditTourBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="290" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="80,5,0,0" Height="31">
+                                </TextBox>
+                                <Button x:Name="FindTour" Margin="0,5,10,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Найти" HorizontalAlignment="Right" Width="95" BorderBrush="#FF0017FF" Height="31" ClickMode="Release" Click="FindTour_Click"/>
+                            </Grid>
+
+
+                            <Border Margin="5,10,5,10" BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="267" VerticalAlignment="Top">
+                                <Grid>
+                                    <StackPanel>
+                                        <TextBlock Text="Номера отеля:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,5,10,10" VerticalAlignment="Center"></TextBlock>
+                                        <DataGrid x:Name="EditHotelRoomsGrid" ItemsSource="{Binding RoomsItems}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                          Height="185">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding FirstTypeOfRoom}" Header="Первый тип" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding SecondTypeOfRoom}" Header="Второй тип" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Price24}" Header="Цена за сутки" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Description}" Header="Описание" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTemplateColumn>
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <CheckBox Style="{StaticResource MaterialDesignCheckBox}" Name="CheckHotelRoom"
+                                                            Content="Удалить" Click="CheckHotelRoom_Click" Foreground="#FF0554F2"/>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                </DataGridTemplateColumn>
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                        <StackPanel Margin="0,5,0,0" Orientation="Horizontal" Height="34" VerticalAlignment="Bottom">
+                                            <Button x:Name="AddHotelRoom" Margin="5,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Добавить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="Auto" VerticalAlignment="Stretch" ClickMode="Release" Click="AddHotelRoom_Click"/>
+                                            <Button x:Name="DelHotelRoom" Margin="15,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Удалить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="Auto" ClickMode="Release" Click="DelHotelRoom_Click"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Height="329">
+                        <Border Margin="5,5,5,0" BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="314" VerticalAlignment="Top">
+                            <Grid>
+                                <StackPanel>
+                                    <TextBlock Text="Информация о туристах:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,5,10,10" VerticalAlignment="Center"></TextBlock>
+                                    <DataGrid x:Name="EditTouristsGrid" ItemsSource="{Binding TouristsItems}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF" Height="229">
+                                        <DataGrid.Columns>
+                                            <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding FIO}" Header="ФИО" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Номер телефона" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Дата рождения" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding DocumentType}" Header="Тип документа" Width="Auto"/>
+                                            <DataGridTextColumn Binding="{Binding DocumentData}" Header="Серия и номер документа" Width="Auto"/>
+                                            <DataGridTemplateColumn>
+                                                <DataGridTemplateColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <CheckBox Style="{StaticResource MaterialDesignCheckBox}" Name="CheckTourist"
+                                                            Content="Удалить" Click="CheckTourist_Click" Foreground="#FF0554F2"/>
+                                                    </DataTemplate>
+                                                </DataGridTemplateColumn.CellTemplate>
+                                            </DataGridTemplateColumn>
+                                        </DataGrid.Columns>
+                                    </DataGrid>
+                                    <StackPanel Margin="0,5,0,0" Orientation="Horizontal" Height="34" VerticalAlignment="Bottom">
+                                        <Button x:Name="AddTourist" Margin="5,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Добавить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="Auto" VerticalAlignment="Stretch" ClickMode="Release" Click="AddTourist_Click"/>
+                                        <Button x:Name="DelTourist" Margin="15,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Удалить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="Auto" ClickMode="Release" Click="DelTourist_Click"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </StackPanel>
+                <Grid HorizontalAlignment="Center" Width="1024" Margin="0 0 0 20">
+                    <Button x:Name="PrevBtn" Margin="50,0,0,10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Content="&lt;" HorizontalAlignment="Left" Width="32" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="PrevBtn_Click"></Button>
+                    <Button x:Name="EditSale" Margin="362,0,0,10" Style="{StaticResource MaterialDesignFlatButton}" Content="Изменить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="EditSale_Click"/>
+                    <Button x:Name="SaveSale" Margin="362,0,0,10" Style="{StaticResource MaterialDesignFlatButton}" Visibility="Collapsed" Content="Сохранить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="SaveSale_Click"/>
+                    <Button x:Name="DelSale" Margin="535,0,0,10" Style="{StaticResource MaterialDesignFlatButton}" Content="Удалить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="DelSale_Click"/>
+                    <Button x:Name="NextBtn" Margin="0,0,50,10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Content="&gt;" HorizontalAlignment="Right" Width="32" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="NextBtn_Click"></Button>
+                </Grid>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

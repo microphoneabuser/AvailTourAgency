@@ -1,0 +1,289 @@
+<UserControl x:Class="AvailTourAgency.Views.SaleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:AvailTourAgency.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="870" d:DesignWidth="1024" Background="White">
+    <ScrollViewer>
+        <StackPanel>
+
+            <Grid Height="870">
+                <StackPanel x:Name="HomePanel">
+                    <Grid>
+                        <TextBlock Foreground="#FF3580BF" FontSize="30" FontWeight="Bold" Margin="10" Grid.Row="1"><Run Text="Продажа №"/></TextBlock>
+                        <ComboBox x:Name='IdComboBox' Style="{StaticResource MaterialDesignComboBox}"
+                                  SelectedIndex='0' HorizontalAlignment="Left"
+                                  Foreground="#FF3580BF" BorderBrush="#FF90CAF9" 
+                                  Background="#3390CAF9" FontSize="22" Width="150" 
+                                  Margin="197,10,0,9.8" Height="41" HorizontalContentAlignment="Left" 
+                                  VerticalContentAlignment="Center" SelectionChanged="IdComboBox_SelectionChanged">
+                        </ComboBox>
+                        <TextBlock x:Name="EditingIndicator" Visibility="Collapsed" Foreground="Gray" FontSize="24" FontWeight="Medium" Margin="10" HorizontalAlignment="Center" TextDecorations="{x:Null}"><Run Text="Режим редактирования"/></TextBlock>
+                        <TextBlock x:Name="comeBackButton" Margin="0 0 30 0" Text="&lt; Вернуться к списку продаж" FontSize="13" Foreground="#FF3580BF" VerticalAlignment="Center" HorizontalAlignment="Right" MouseEnter="comeBackButton_MouseEnter" MouseLeave="comeBackButton_MouseLeave" MouseLeftButtonDown="comeBackButton_MouseLeftButtonDown" MouseLeftButtonUp="comeBackButton_MouseLeftButtonUp"></TextBlock>
+                    </Grid>
+                </StackPanel>
+                <StackPanel x:Name="CurrentAddServicePanel" Margin="10,50,10,47" Visibility="Visible">
+                    <Grid Margin="0 0 0 0" Height="1103">
+                        <StackPanel HorizontalAlignment="Left" Width="480" Margin="0,0,0,0">
+                            <StackPanel>
+                                <Grid>
+                                    <TextBlock Text="Дата продажи:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 10 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="SaleDateBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Общая стоимость:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="PriceBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Способ оплаты:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="PaymentMethodBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Тур-менеджер:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="EmployeeBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="310" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="161,5,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                            </StackPanel>
+                            <TextBlock Text="Информация о туре:" FontSize="16" FontWeight="SemiBold" Foreground="#FF0058A2" Margin="10 10 5 5" VerticalAlignment="Center"></TextBlock>
+                            <Border BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Margin="5 0 5 0" Height="372">
+                                <StackPanel>
+                                    <Grid>
+                                        <TextBlock Text="Название тура:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="TourNameBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Дата вылета:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="FlyDateThereBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Дата вылета обратно:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="FlyDateBackBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Длительность:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="LengthBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Цена тура:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="TourPriceBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Авиакомпания:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="AirlineBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Самолет:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="PlaneBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Класс перелета:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="FlightClassBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Багаж:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="LuggageBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Питание:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="MealsBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="282" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="175,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+                            <Border Margin="5,10,5,10" BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="202" VerticalAlignment="Top">
+                                <Grid>
+                                    <StackPanel>
+                                        <TextBlock Text="Дополнительные услуги:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,5,10,10" VerticalAlignment="Center"></TextBlock>
+                                        <DataGrid x:Name="AddServicesGrid" ItemsSource="{Binding AddServicesItems}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                          Height="150" Margin="0,0,0.2,0">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding Name}" Header="Название" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Price}" Header="Цена" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Quantity}" Header="Количество" Width="Auto"></DataGridTextColumn>
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,10,336" HorizontalAlignment="Right" Width="492">
+                            <TextBlock Text="Информация о клиенте:" FontSize="16" FontWeight="SemiBold" Foreground="#FF0058A2" Margin="10 10 5 5" VerticalAlignment="Center"></TextBlock>
+                            <Border BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Margin="5 0 5 0" Height="115">
+                                <StackPanel>
+                                    <Grid>
+                                        <TextBlock Text="ФИО клиента:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="FIOBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="315" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="155,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Номер телефона:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="PhoneNumberBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="315" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="155,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                    <Grid>
+                                        <TextBlock Text="Паспорт:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 5 0 5" VerticalAlignment="Center"></TextBlock>
+                                        <TextBox Name="PassportBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="315" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="155,5,0,0" Height="31">
+                                        </TextBox>
+                                    </Grid>
+                                </StackPanel>
+                            </Border>
+                            <Border Margin="5,10,5,10" BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="232" VerticalAlignment="Top">
+                                <Grid>
+                                    <StackPanel>
+                                        <TextBlock Text="Информация о туристах:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,5,10,10" VerticalAlignment="Center"></TextBlock>
+                                        <DataGrid x:Name="TouristsGrid" ItemsSource="{Binding TouristsItems}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                          Height="184">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding FIO}" Header="ФИО" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding PhoneNumber}" Header="Номер телефона" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding DateOfBirth}" Header="Дата рождения" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding DocumentType}" Header="Тип документа" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding DocumentData}" Header="Серия и номер документа" Width="Auto"/>
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                            <Grid>
+                                <TextBlock Text="Город:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 10 0 10" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="CityBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="400" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="66,5,0,0" Height="31">
+                                </TextBox>
+                            </Grid>
+                            <Grid>
+                                <TextBlock Text="Отель:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 10 0 10" VerticalAlignment="Center"></TextBlock>
+                                <TextBox Name="HotelBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="400" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="66,5,0,0" Height="31">
+                                </TextBox>
+                            </Grid>
+                            <Border Margin="5,10,5,10" BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="267" VerticalAlignment="Top">
+                                <Grid>
+                                    <StackPanel>
+                                        <TextBlock Text="Номера отеля:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,5,10,10" VerticalAlignment="Center"></TextBlock>
+                                        <DataGrid x:Name="HotelRoomsGrid" ItemsSource="{Binding RoomsItems}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                          Height="218">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                                <DataGridTextColumn Binding="{Binding FirstTypeOfRoom}" Header="Первый тип" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding SecondTypeOfRoom}" Header="Второй тип" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Price24}" Header="Цена за сутки" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Description}" Header="Описание" Width="Auto"></DataGridTextColumn>
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+
+
+                    </Grid>
+                </StackPanel>
+                <Button x:Name="EditSale" Margin="362,0,0,10" Style="{StaticResource MaterialDesignFlatButton}" Content="Изменить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="EditSale_Click"/>
+                <Button x:Name="DelSale" Margin="535,0,0,10" Style="{StaticResource MaterialDesignFlatButton}" Content="Удалить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="DelSale_Click"/>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

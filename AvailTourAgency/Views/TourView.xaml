@@ -1,0 +1,247 @@
+﻿<UserControl x:Class="AvailTourAgency.Views.TourView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:AvailTourAgency.Views"
+             mc:Ignorable="d"
+             d:DesignHeight="740" d:DesignWidth="1024" Background="White">
+    <ScrollViewer>
+        <StackPanel>
+
+            <Grid Height="740">
+                <Grid x:Name="HomePanel" Margin="0,0,0.2,0" Height="61" VerticalAlignment="Top">
+                    <Grid>
+                        <TextBlock Foreground="#FF3580BF" FontSize="30" FontWeight="Bold" Margin="10" Grid.Row="1"><Run Text="Тур №"/></TextBlock>
+                        <TextBox x:Name='IdBox' IsReadOnly="True"
+                                  HorizontalAlignment="Left"
+                                  Foreground="#FF3580BF" BorderBrush="#FF90CAF9" 
+                                  Background="#3390CAF9" FontSize="22" Width="150" 
+                                  Margin="114,10,0,9.8" Height="41" HorizontalContentAlignment="Center" 
+                                  VerticalContentAlignment="Center">
+                        </TextBox>
+                        <TextBlock x:Name="EditingIndicator" Visibility="Collapsed" Foreground="Gray" FontSize="24" FontWeight="Medium" Margin="10" HorizontalAlignment="Center" TextDecorations="{x:Null}"><Run Text="Режим редактирования"/></TextBlock>
+                        <TextBlock x:Name="comeBackButton" Margin="0 0 30 0" Text="&lt; Вернуться к списку туров" FontSize="13" Foreground="#FF3580BF" VerticalAlignment="Center" HorizontalAlignment="Right" MouseEnter="comeBackButton_MouseEnter" MouseLeave="comeBackButton_MouseLeave" MouseLeftButtonDown="comeBackButton_MouseLeftButtonDown" MouseLeftButtonUp="comeBackButton_MouseLeftButtonUp"></TextBlock>
+                    </Grid>
+                </Grid>
+                <StackPanel x:Name="CurrentAddServicePanel" Margin="10,50,10,0" Visibility="Visible" Height="601" VerticalAlignment="Top">
+                    <Grid Margin="0 0 0 0" Height="603">
+                        <Grid x:Name="ViewTourGrid" Visibility="Visible" Margin="0,0,0.2,0" Height="103" VerticalAlignment="Top">
+                            <StackPanel HorizontalAlignment="Left" Width="480" Height="98" VerticalAlignment="Top">
+                                <Grid>
+                                    <TextBlock Text="Название:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 20 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="NameBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="360" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="110,10,0,0" Height="31">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Город:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 20 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="CityBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="True" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="360" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="110,10,0,0" Height="33">
+                                    </TextBox>
+                                </Grid>
+
+                            </StackPanel>
+                            <StackPanel Margin="485,0,0,0" Height="98" VerticalAlignment="Top" HorizontalAlignment="Left" Width="492">
+                                <Grid Height="97">
+                                    <TextBlock Text="Описание:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5,20,0,0" VerticalAlignment="Top"></TextBlock>
+                                    <TextBox Name="DescriptionBox" Style="{StaticResource MaterialDesignTextBox}"
+                                            Language="ru" FontSize="14" TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="True"
+                                            AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                            HorizontalAlignment="Left" Width="360" Foreground="#FF3580BF"
+                                            VerticalAlignment="Top" Margin="110,0,0,0" Height="97" BorderThickness="0.5">
+                                    </TextBox>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <Grid x:Name="EditTourGrid" Visibility="Collapsed" Margin="0,0,0.2,0" Height="103" VerticalAlignment="Top">
+                            <StackPanel HorizontalAlignment="Left" Width="480" Height="98" VerticalAlignment="Top">
+                                <Grid>
+                                    <TextBlock Text="Название:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 20 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <TextBox Name="EditNameBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" IsReadOnly="False" FontSize="14"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="360" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="110,10,0,0" Height="31"
+                                        TextChanged="EditNameBox_TextChanged">
+                                    </TextBox>
+                                </Grid>
+                                <Grid>
+                                    <TextBlock Text="Город:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5 20 0 5" VerticalAlignment="Center"></TextBlock>
+                                    <ComboBox x:Name='EditCityBox' Style="{StaticResource MaterialDesignComboBox}"
+                                          SelectedIndex='0' HorizontalAlignment="Left"
+                                          Foreground="#FF3580BF" BorderBrush="#FF90CAF9" 
+                                          Background="#3390CAF9" FontSize="14" Width="361" 
+                                          Margin="109,10,0,7.4" Height="33" SelectionChanged="EditCityBox_SelectionChanged">
+                                    </ComboBox>
+                                </Grid>
+
+                            </StackPanel>
+                            <StackPanel Margin="485,0,0,0" Height="98" VerticalAlignment="Top" HorizontalAlignment="Left" Width="492">
+                                <Grid Height="97">
+                                    <TextBlock Text="Описание:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="5,20,0,0" VerticalAlignment="Top"></TextBlock>
+                                    <TextBox Name="EditDescriptionBox" Style="{StaticResource MaterialDesignTextBox}"
+                                        Language="ru" FontSize="14" TextWrapping="Wrap" AcceptsReturn="True" IsReadOnly="False"
+                                        AutomationProperties.IsOffscreenBehavior="Onscreen"
+                                        HorizontalAlignment="Left" Width="360" Foreground="#FF3580BF"
+                                        VerticalAlignment="Top" Margin="110,0,0,0" Height="97" BorderThickness="0.5">
+                                    </TextBox>
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <Grid Margin="0,108,0.2,0">
+                            <Border BorderBrush="#FF3580BF" CornerRadius="10" BorderThickness="2" Height="479" VerticalAlignment="Top">
+                                <Grid>
+                                    <Grid>
+                                        <TextBlock Text="Вариации тура:" FontSize="16" FontWeight="SemiBold" Foreground="#FF3580BF" Margin="10,10,10,432" VerticalAlignment="Center" RenderTransformOrigin="0.5,-9.667" Height="34"></TextBlock>
+                                        <DataGrid x:Name="TourDatesPricesGrid" ItemsSource="{Binding TourDatesPricesItems}"
+                                              CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                              ClipboardCopyMode="IncludeHeader" IsReadOnly="True" 
+                                              AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                              IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                              MouseDoubleClick="TourDatesPricesGrid_MouseLeftButtonUp" Margin="0,49,0,55">
+                                            <DataGrid.Columns>
+                                                <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto" IsReadOnly="True"/>
+
+                                                <DataGridTemplateColumn Header="Дата вылета" SortMemberPath="Дата вылета" CanUserSort="True">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding FlyDateThere}"/>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                    <DataGridTemplateColumn.CellEditingTemplate>
+                                                        <DataTemplate>
+                                                            <DatePicker Name="fDate" SelectedDateFormat="Short" Language="ru" SelectedDate="{Binding FlyDateThere}" />
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellEditingTemplate>
+                                                </DataGridTemplateColumn>
+
+                                                <DataGridTemplateColumn Header="Дата вылета обратно" SortMemberPath="Дата вылета обратно" CanUserSort="True">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding FlyDateBack}" />
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                    <DataGridTemplateColumn.CellEditingTemplate>
+                                                        <DataTemplate>
+                                                            <DatePicker Name="sDate" SelectedDateFormat="Short" Language="ru" SelectedDate="{Binding FlyDateBack}" />
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellEditingTemplate>
+                                                </DataGridTemplateColumn>
+
+                                                <DataGridTextColumn Binding="{Binding Length, ValidatesOnExceptions=True, StringFormat={}{0}}" Header="Длительность" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Price, ValidatesOnExceptions=True, StringFormat={}{0}}" Header="Цена" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Airline}" Header="Авиакомпания" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTextColumn Binding="{Binding Plane}" Header="Самолет" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTemplateColumn x:Name="FlightClass" Header="Класс перелета" SortMemberPath="Класс перелета" CanUserSort="True">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding FlightClass}"/>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                    <DataGridTemplateColumn.CellEditingTemplate>
+                                                        <DataTemplate>
+                                                            <ComboBox x:Name="FlightClassComboBox" Text="{Binding FlightClass}" ItemsSource="{Binding Path=FlightClasses.Values, Mode=OneTime}"
+                                                                      IsSynchronizedWithCurrentItem="False" >
+                                                            </ComboBox>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellEditingTemplate>
+                                                </DataGridTemplateColumn>
+                                                <DataGridTemplateColumn x:Name="Luggage" Header="Багаж" SortMemberPath="Багаж" CanUserSort="True">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding Luggage}"/>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                    <DataGridTemplateColumn.CellEditingTemplate>
+                                                        <DataTemplate>
+                                                            <ComboBox x:Name="LuggageComboBox" Text="{Binding Luggage}"
+                                                                      IsSynchronizedWithCurrentItem="False" >
+                                                                <ComboBoxItem>Включено</ComboBoxItem>
+                                                                <ComboBoxItem>Не включено</ComboBoxItem>
+                                                            </ComboBox>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellEditingTemplate>
+                                                </DataGridTemplateColumn>
+                                                <DataGridTemplateColumn x:Name="Meals" Header="Питание" SortMemberPath="Питание" CanUserSort="True">
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <TextBlock Text="{Binding Meals}"/>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                    <DataGridTemplateColumn.CellEditingTemplate>
+                                                        <DataTemplate>
+                                                            <ComboBox x:Name="MealsComboBox" Text="{Binding Meals}"
+                                                                      IsSynchronizedWithCurrentItem="False" >
+                                                                <ComboBoxItem>Включено</ComboBoxItem>
+                                                                <ComboBoxItem>Не включено</ComboBoxItem>
+                                                            </ComboBox>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellEditingTemplate>
+                                                </DataGridTemplateColumn>
+                                                <DataGridTextColumn Binding="{Binding Quantity}" Header="Количество" Width="Auto"></DataGridTextColumn>
+                                                <DataGridTemplateColumn>
+                                                    <DataGridTemplateColumn.CellTemplate>
+                                                        <DataTemplate>
+                                                            <CheckBox Style="{StaticResource MaterialDesignCheckBox}" Name="checkTDP"
+                                                            Content="Удалить" Click="checkTDP_Click" Foreground="#FF0554F2"/>
+                                                        </DataTemplate>
+                                                    </DataGridTemplateColumn.CellTemplate>
+                                                </DataGridTemplateColumn>
+
+                                            </DataGrid.Columns>
+                                        </DataGrid>
+                                    </Grid>
+                                    <StackPanel Margin="0,426,320,0" Orientation="Horizontal" Height="34" VerticalAlignment="Top">
+                                        <Button x:Name="AddTourDatesPrice" Margin="5,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Добавить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="Auto" VerticalAlignment="Stretch"
+                                                ClickMode="Release" Click="AddTourDatesPrice_Click"/>
+                                        <!--<Button x:Name="EditTourDatesPrice" Margin="10,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Режим рекдактирования" HorizontalAlignment="Left" Width="202" BorderBrush="#FF0017FF" Height="Auto"
+                                                ClickMode="Release" Click="EditTourDatesPrice_Click"/>-->
+                                        <Button x:Name="DelTourDatesPrice" Margin="10,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Удалить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="Auto"
+                                                ClickMode="Release" Click="DelTourDatesPrice_Click"/>
+                                        <CheckBox x:Name="EditTourDatesPrice" Margin="20 0 0 0" Content="Режим редактирования" FontSize="14" Style="{StaticResource MaterialDesignFilterChipPrimaryCheckBox}" Foreground="#FF2196F3" Click="EditTourDatesPrice_Click" IsEnabledChanged="EditTourDatesPrice_IsEnabledChanged"></CheckBox>
+                                    </StackPanel>
+                                    <Grid Margin="480,426,0,0" Height="34" VerticalAlignment="Top">
+                                        <Button x:Name="SaveTourDatesPrice" Margin="40,0,0,0" Style="{StaticResource MaterialDesignFlatButton}" Content="Сохранить" HorizontalAlignment="Left" Width="140" BorderBrush="#FF0017FF" Height="Auto"
+                                                ClickMode="Release" Click="SaveTourDatesPrice_Click"/>
+                                        <CheckBox x:Name="DeletedCheckBox" Margin="318,0,0,0" Content="Показывать удаленные" Foreground="#FF3580BF" FontSize="14" Click="DeletedCheckBox_Click"/>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                        <!--<DataGrid x:Name="SalesGrid" ItemsSource="{Binding Items}"
+                                          CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeRows="True" CanUserResizeColumns="False"
+                                          ClipboardCopyMode="IncludeHeader" IsReadOnly="True"
+                                          AutoGenerateColumns="False" GridLinesVisibility="All" HeadersVisibility="Column"
+                                          IsHitTestVisible="True" Background="White" Foreground="#FF0554F2" BorderBrush="#4C0046FF"
+                                          MouseLeftButtonUp="SalesGrid_MouseLeftButtonUp" Margin="10,587,10,0">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding ID}" Header="Номер" Width="Auto"/>
+                                <DataGridTextColumn Binding="{Binding Client}" Header="Клиент" Width="Auto"></DataGridTextColumn>
+                                <DataGridTextColumn Binding="{Binding SaleDate}" Header="Дата продажи" Width="Auto"></DataGridTextColumn>
+                                <DataGridTextColumn Binding="{Binding FlightDate}" Header="Дата вылета" Width="Auto"></DataGridTextColumn>
+                                <DataGridTextColumn Binding="{Binding Hotel}" Header="Отель" Width="Auto"></DataGridTextColumn>
+                                <DataGridTextColumn Binding="{Binding Price}" Header="Стоимость" Width="Auto"></DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>-->
+                    </Grid>
+                </StackPanel>
+                <Grid HorizontalAlignment="Center" Width="1024" Margin="0 0 0 20">
+                    <Button x:Name="PrevBtn" Margin="50,0,0,10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Content="&lt;" HorizontalAlignment="Left" Width="32" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="PrevBtn_Click"></Button>
+                    <Button x:Name="EditTour" Visibility="Visible" Margin="200,0,0,10" Style="{StaticResource MaterialDesignFlatButton}" Content="Изменить" HorizontalAlignment="Left" Width="150" BorderBrush="#FF0017FF" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="EditTour_Click"/>
+                    <Button x:Name="SaveTour" Visibility="Collapsed" Margin="200,0,0,10" Style="{StaticResource MaterialDesignFlatButton}" Content="Сохранить" HorizontalAlignment="Left" Width="150" BorderBrush="#FF0017FF" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="SaveTour_Click"/>
+                    <Button x:Name="DelTour" Margin="409,0,0,10" Style="{StaticResource MaterialDesignFlatButton}" Content="Удалить" HorizontalAlignment="Left" Width="190" BorderBrush="#FF0017FF" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="DelTour_Click"/>
+                    <Button x:Name="SalesViewButton" Margin="673,0,0,10" Style="{StaticResource MaterialDesignFlatButton}" Content="Список продаж" HorizontalAlignment="Left" Width="180" BorderBrush="#FF0017FF" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="SalesViewButton_Click"/>
+                    <Button x:Name="NextBtn" Margin="0,0,50,10" Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}" Content="&gt;" HorizontalAlignment="Right" Width="32" Height="32" VerticalAlignment="Bottom" ClickMode="Release" Click="NextBtn_Click"></Button>
+                </Grid>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>
