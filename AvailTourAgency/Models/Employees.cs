@@ -102,7 +102,7 @@ namespace AvailTourAgency.Models
             List<Employee> employees = GetEmployees(showNotDeleted, showDeleted, id, fio, passport, phoneNumber, position, inn, login,
                 sorting, ascOrDesc, count, page, ref genCount);
 
-            var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(48);
+            var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(AppDomain.CurrentDomain.BaseDirectory.Length - 11, 10);
 
             foreach (Employee employee in employees)
             {

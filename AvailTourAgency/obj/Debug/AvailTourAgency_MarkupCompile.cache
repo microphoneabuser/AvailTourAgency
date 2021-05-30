@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\code_projects\AvailWithSQLite\AvailTourAgency\obj\Debug\
+C:\storage\code_projects\AvailWithSQLite\AvailTourAgency\obj\Debug\
 AvailTourAgency
 none
 false
 DEBUG;TRACE
-D:\code_projects\AvailWithSQLite\AvailTourAgency\App.xaml
+C:\storage\code_projects\AvailWithSQLite\AvailTourAgency\App.xaml
 40-2110472472
 
 75-2066040098
-39-1211329322
+39-2138526123
 Views\AccountView.xaml;Views\HotelSalesControl.xaml;Views\ClientSalesControl.xaml;Views\CitySalesControl.xaml;Views\EmployeeSalesControl.xaml;Views\AuthWindow.xaml;Views\AddServiceSalesControl.xaml;Views\CityHotelsControl.xaml;Views\TourSalesControl.xaml;Views\TouristView.xaml;Views\FindTouristControl.xaml;Views\FindAddServiceControl.xaml;Views\AddSericesControl.xaml;Views\AddServiceView.xaml;Views\FindCityControl.xaml;Views\CitiesControl.xaml;Views\CityView.xaml;Views\FindClientControl.xaml;Views\ClientsControl.xaml;Views\ClientView.xaml;Views\EmployeesControl.xaml;Views\EmployeeView.xaml;Views\ExitMessageBox.xaml;Views\FindHotelRoomControl.xaml;Views\HotelRoomAddWindow.xaml;Views\FindHotelControl.xaml;Views\HotelsControl.xaml;Views\HotelView.xaml;Views\MainWindow.xaml;Views\ChooseQuantityBox.xaml;Views\MyMessageBox.xaml;Views\SalesControl.xaml;Views\SaleView.xaml;Views\SecondWindow.xaml;Views\TourDatesPriceAddWindow.xaml;Views\FindTourControl.xaml;Views\ToursControl.xaml;Views\ToursControlCards.xaml;Views\FindTDPControl.xaml;Views\TourView.xaml;
 
 False

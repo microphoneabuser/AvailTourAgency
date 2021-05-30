@@ -38,7 +38,7 @@ namespace AvailTourAgency.Views
         }
         public void FillImage()
         {
-            var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(48);
+            var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(AppDomain.CurrentDomain.BaseDirectory.Length - 11, 10);
             string imgUri = System.IO.Path.Combine(appDir, Employees.GetEmployeeByID(User.GetUser().ID).Image);
             if (imgUri != null && imgUri != "")
             {

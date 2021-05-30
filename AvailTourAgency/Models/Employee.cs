@@ -127,7 +127,7 @@ namespace AvailTourAgency.Models
 
                 string newPath = $"Assets/{fileName}.jpg";
 
-                var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(48);
+                var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(AppDomain.CurrentDomain.BaseDirectory.Length - 11, 10);
                 var relativePath = $"Assets\\{fileName}.jpg";
                 var fullPath = Path.Combine(appDir, relativePath);
 

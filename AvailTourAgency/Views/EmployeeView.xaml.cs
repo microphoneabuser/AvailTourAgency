@@ -87,7 +87,7 @@ namespace AvailTourAgency.Views
             PositionBox.Text = CurrEmployee.GetRole().Name;
             LoginBox.Text = CurrEmployee.Login;
 
-            var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(48);
+            var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(AppDomain.CurrentDomain.BaseDirectory.Length - 11, 10);
             string imgUri = System.IO.Path.Combine(appDir, CurrEmployee.Image);
 
             Image.Source = new BitmapImage(new Uri(imgUri));
@@ -465,7 +465,7 @@ namespace AvailTourAgency.Views
         {   
             CurrEmployee.SetImage(path);
 
-            var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(48);
+            var appDir = System.AppDomain.CurrentDomain.BaseDirectory.Remove(AppDomain.CurrentDomain.BaseDirectory.Length - 11, 10);
             string imgUri = System.IO.Path.Combine(appDir, CurrEmployee.Image);
 
             BitmapImage bitmapImage = new BitmapImage(new Uri(imgUri));
